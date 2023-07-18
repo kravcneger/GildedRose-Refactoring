@@ -83,4 +83,15 @@ describe GildedRose do
     end
   end
 
+  describe "Sulfuras" do
+    let(:name){'Sulfuras, Hand of Ragnaros'}
+    before { GildedRose.new([item]).update_quality() }
+
+    context "sell_in not expired" do
+      let(:item){ Item.new(name,20,20) }
+      it { expect(item.quality).to eq 20 }
+      it { expect(item.sell_in).to eq 20 }
+    end
+  
+  end
 end
