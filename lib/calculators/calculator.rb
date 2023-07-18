@@ -1,8 +1,8 @@
 class Calculator
   protected attr_reader :item
 
-  def initialize(item)
-    unless item.kind_of? Item
+  def initialize(item = nil)
+    if !item.kind_of?(Item) && item != nil
       raise ArgumentError, 'Argument should be an even subtype of Item'
     end
     @item = item

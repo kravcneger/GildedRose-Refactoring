@@ -7,14 +7,14 @@ class ItemManager
 		"Conjured" => ConjuredCalculator
 	}
 	@calculators_instances = {}
-	@common_calculator ||= CommonCalculator.new(Item.new(1,2,3))
+	@common_calculator ||= CommonCalculator.new
   end
 
   def update_quality item
     calculator = @common_calculator
     @brands.each do |name,cal|
       if name == item.name
-		@calculators_instances[name] ||= cal.new(item)
+		@calculators_instances[name] ||= cal.new
 		calculator = @calculators_instances[name]
       end
     end
