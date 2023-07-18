@@ -1,6 +1,8 @@
-require_relative 'calculators/calculator'
 require_relative 'calculators/aged_brie_calculator'
+require_relative 'calculators/backstage_passes_calculator'
+require_relative 'calculators/calculator'
 require_relative 'calculators/common'
+
 
 class GildedRose
 
