@@ -1,9 +1,16 @@
 class Calculator
-  protected attr_accessor :item
+  protected attr_reader :item
 
   def initialize(item)
     unless item.kind_of? Item
-     raise ArgumentError, 'Argument should be an even subtype of Item'
+      raise ArgumentError, 'Argument should be an even subtype of Item'
+    end
+    @item = item
+  end
+
+  def item=(item)
+    unless item.kind_of? Item
+      raise ArgumentError, 'Argument should be an even subtype of Item'
     end
     @item = item
   end
@@ -25,4 +32,7 @@ class Calculator
   protected def max_quality
     50
   end
+
+  private
+
 end
