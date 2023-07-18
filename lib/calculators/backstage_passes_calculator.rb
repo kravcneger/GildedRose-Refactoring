@@ -7,11 +7,11 @@ class BackStagePasses < Calculator
     when item.sell_in < 1
       item.quality = 0
     when item.sell_in <= 5
-      change_quality(3)
+      change_quality_by(3)
     when item.sell_in <= 10
-      change_quality(2)
+      change_quality_by(2)
     else
-      change_quality(1)
+      change_quality_by(1)
     end
     item.sell_in -= 1
   end

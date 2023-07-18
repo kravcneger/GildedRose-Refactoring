@@ -12,10 +12,10 @@ class Calculator
    raise NotImplementedError, "ERROR: update_quality is not implemented"
   end
 
-  protected def change_quality n
-    if @item.quality + n > max_quality
+  protected def change_quality_by n
+    if @item.quality + n >= max_quality
       @item.quality = max_quality
-    elsif  @item.quality + n < 0
+    elsif  @item.quality + n <= 0
       @item.quality = 0
     else
       @item.quality += n
