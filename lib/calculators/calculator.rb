@@ -1,16 +1,17 @@
 class Calculator
+  WRONG_ARG = 'Argument should be an even subtype of Item'
   protected attr_reader :item
 
   def initialize(item = nil)
     if !item.kind_of?(Item) && item != nil
-      raise ArgumentError, 'Argument should be an even subtype of Item'
+      raise ArgumentError, WRONG_ARG
     end
     @item = item
   end
 
   def item=(item)
     unless item.kind_of? Item
-      raise ArgumentError, 'Argument should be an even subtype of Item'
+      raise ArgumentError, WRONG_ARG
     end
     @item = item
   end
