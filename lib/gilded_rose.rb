@@ -1,3 +1,7 @@
+require_relative 'calculators/calculator'
+require_relative 'calculators/aged_brie_calculator'
+require_relative 'calculators/common'
+
 class GildedRose
 
   def initialize(items)

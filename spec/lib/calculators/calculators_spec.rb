@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), 'calculator')
+require 'spec_helper'
 
 describe Calculator do
   let(:item){ Item.new("item",10,10) }

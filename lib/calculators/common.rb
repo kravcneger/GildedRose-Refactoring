@@ -1,3 +1,5 @@
+require 'calculators/calculator'
+
 class CommonCalculator < Calculator
 
   def update_quality
